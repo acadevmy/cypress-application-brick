@@ -21,7 +21,7 @@ vars:
     description: The commands to execute via cypress-runner to start all the frontends and all the backends necessary for the tests.
     prompt: What is (or are) the command to launch the frontends and backends for this application? If the frontend needs a backend contained in the workspace, also include its command.
     default:
-      - 'pnpm run start:production'
+      - 'pnpm run start'
   waitOnUrls:
     type: list
     description: the urls that must be alive via cypress-runner in order to start the cypress tests.
