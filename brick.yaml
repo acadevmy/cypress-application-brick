@@ -1,7 +1,7 @@
 name: cypress_application_brick
 description: A brick which allows you to create a cypress application
 repository: https://github.com/acadevmy/cypress-application-brick
-version: 1.0.0
+version: 1.0.1
 
 environment:
   mason: 0.1.0-dev.54
@@ -20,9 +20,12 @@ vars:
     type: list
     description: The commands to execute via cypress-runner to start all the frontends and all the backends necessary for the tests.
     prompt: What is (or are) the command to launch the frontends and backends for this application? If the frontend needs a backend contained in the workspace, also include its command.
-    default: ['pnpm run start:production']
+    default:
+      - 'pnpm run start:production'
   waitOnUrls:
     type: list
     description: the urls that must be alive via cypress-runner in order to start the cypress tests.
     prompt: Which URLs must be reachable before running the tests? If the frontend needs a backend contained in the workspace, also include its URL.
-    default: ['http://localhost:4000', 'http://localhost:3000']
+    default:
+      - 'http://localhost:4000'
+      - 'http://localhost:3000'
