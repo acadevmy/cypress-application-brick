@@ -6,7 +6,7 @@ const config: CypressRunnerConfig = {
 {{#webServerCommands}}
   {{#items}}
     {
-      command: '{{value}}',
+      command: '{{{value}}}',
       raw: false,
       cwd: '../..',
     },
@@ -17,7 +17,7 @@ const config: CypressRunnerConfig = {
     resources: [
 {{#waitOnUrls}}
   {{#items}}
-      '{{value}}',
+      '{{{value}}}',
   {{/items}}
 {{/waitOnUrls}}
     ],

@@ -21,11 +21,11 @@ const setupNodeEvents = async (
 
 export default defineConfigWithDotenv({
   dotenv: {
-    prefix: '{{applicationName.paramCase()}}_',
+    prefix: '{{applicationName.constantCase()}}_',
     root: '../../',
   },
   e2e: {
-    baseUrl: '{{baseUrl}}',
+    baseUrl: '{{{baseUrl}}}',
     video: true,
     screenshotOnRunFailure: true,
     experimentalRunAllSpecs: true,
@@ -38,6 +38,6 @@ export default defineConfigWithDotenv({
     downloadsFolder: 'downloads',
     chromeWebSecurity: false,
     setupNodeEvents,
-    projectId: process.env.{{applicationName.paramCase()}}_PROJECT_ID,
+    projectId: process.env.{{applicationName.constantCase()}}_PROJECT_ID,
   },
 });
