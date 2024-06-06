@@ -1,0 +1,43 @@
+{
+  "name": "{{applicationName.paramCase()}}",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "preinstall": "pnpm dlx only-allow pnpm",
+    "e2e": "cypress-runner open",
+    "e2e:headless": "cypress-runner run --record",
+    "postinstall": "cypress install",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx,html}'",
+    "lint:fix": "eslint 'src/**/*.{js,jsx,ts,tsx,html}' --fix"
+  },
+  "packageManager": "pnpm@9.1.2",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.5",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.1",
+    "@devmy/cypress-dotenv": "^1.0.0",
+    "@devmy/cypress-runner": "^1.2.0",
+    "@types/node": "^20.12.7",
+    "@typescript-eslint/eslint-plugin": "^7.11.0",
+    "cypress": "13.8.0",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-plugin-cypress": "2.15.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-simple-import-sort": "^12.1.0",
+    "prettier": "^3.2.5",
+    "typescript": "5.2.2"
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "inputs": [
+          "default",
+          "environment"
+        ]
+      }
+    }
+  }
+}

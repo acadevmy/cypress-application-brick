@@ -1,0 +1,13 @@
+{
+  "stepDefinitions": [
+    "src/steps/**/*.{js,ts}"
+  ],
+  "html": {
+    "enabled": true,
+    "output": "reports/cucumber-report.html"
+  },
+  "json": {
+    "enabled": true,
+    "output": "reports/cucumber-report.json"
+  }
+}

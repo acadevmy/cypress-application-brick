@@ -1,0 +1,35 @@
+{
+  "root": true,
+  "extends": ["plugin:cypress/recommended"],
+  "ignorePatterns": ["!**/*"],
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "overrides": [
+    {
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      },
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended",
+        "plugin:cypress/recommended",
+        "plugin:prettier/recommended"
+      ],
+      "plugins": [
+        "simple-import-sort"
+      ],
+      "files": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx", "cypress.config.ts",".cypressrunnerrc.ts", "env.d.ts"],
+      "rules": {
+        "@typescript-eslint/ban-ts-comment": 0,
+        "@ngrx/no-typed-global-store": 0,
+        "no-console": [
+          "error"
+        ],
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error"
+      }
+    }
+  ]
+}
