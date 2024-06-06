@@ -19,3 +19,9 @@ A brick [Mason](https://pub.dev/packages/mason) 🧱, which allows you to create
 | getByDataTest                 | Get elements by "data-test" attribute                          |
 | useCustomer                   | Login as customer user                                         |
 | useAdmin                      | Login as admin user                                            |
+
+## Pre-configured environments
+
+| Utility                       | Description                                                    |
+|-------------------------------|----------------------------------------------------------------|
+| {{applicationName.constantCase()}}_PROJECT_ID | the project id for cypress cloud |

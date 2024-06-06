@@ -3,19 +3,23 @@ import { CypressRunnerConfig } from '@devmy/cypress-runner';
 const config: CypressRunnerConfig = {
   debug: true,
   startWebServerCommands: [
-    {{#webServerCommands}}
+{{#webServerCommands}}
+  {{#items}}
     {
-      command: '{{.}}',
+      command: '{{value}}',
       raw: false,
       cwd: '../..',
     },
-   {{/webServerCommands}}
+  {{/items}}
+{{/webServerCommands}}
   ],
   waitOn: {
     resources: [
-      {{#waitOnUrls}}
-      '{{.}}',
-      {{/waitOnUrls}}
+{{#waitOnUrls}}
+  {{#items}}
+      '{{value}}',
+  {{/items}}
+{{/waitOnUrls}}
     ],
     strictSSL: false,
     timeout: 600000,
