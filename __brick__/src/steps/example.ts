@@ -1,6 +1,8 @@
 import { Given, Then, When } from '@badeball/cypress-cucumber-preprocessor';
 
-Given('An anonymous user', () => {});
+Given('An anonymous user', () => {
+  cy.visit('/');
+});
 
 When('I navigate to application', () => {
   cy.visit('/');
